@@ -12,8 +12,10 @@ lazy val format = project
     mainClass.in(assembly) := Some("org.scalafmt.Format"),
     resolvers += Resolver.sonatypeRepo("releases"),
     libraryDependencies ++= List(
+
       "com.lihaoyi" %% "pprint" % "0.5.2", // for debugging
-      "org.scalameta" %% "paiges" % "0.2.2-SNAP1",
+      // "org.scalameta" %% "paiges" % "0.2.2-SNAP1",
+      "org.typelevel" %% "paiges-core" % "0.3.0",
       "org.scalameta" %% "scalameta" % metaV
     )
   )

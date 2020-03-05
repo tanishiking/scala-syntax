@@ -4,7 +4,7 @@ import scala.meta.internal.prettyprinters.{ScalaToken => S}
 
 import scala.meta.Tree
 
-import scala.meta.internal.paiges.Doc
+import org.typelevel.paiges.Doc
 
 trait SyntacticGroupOps extends WithPrinter {
   def wrapParens(doc: Doc): Doc = wrapParens(S.`(`, doc, S.`)`)

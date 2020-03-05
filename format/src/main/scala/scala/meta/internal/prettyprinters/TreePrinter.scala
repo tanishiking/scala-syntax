@@ -8,8 +8,8 @@ import SyntacticGroup.Type._
 import CustomTrees.PatName
 import ScalaToken._
 
-import scala.meta.internal.paiges.Doc
-import scala.meta.internal.paiges.Doc._
+import org.typelevel.paiges.Doc
+import org.typelevel.paiges.Doc._
 
 import scala.meta.{`package` => _, _}
 
@@ -23,7 +23,9 @@ object TreePrinter {
   }
 
   def printInput(input: Input, options: Options): Doc = {
-    printTree(getRoot(input, options), options)
+    val res = printTree(getRoot(input, options), options)
+    pprint.pprintln(res)
+    res
   }
 
   def printTree(root: Tree, options: Options): Doc = {

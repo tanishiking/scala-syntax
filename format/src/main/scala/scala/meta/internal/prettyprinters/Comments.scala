@@ -5,7 +5,7 @@ import java.nio.charset.StandardCharsets
 import scala.meta._
 import scala.meta.internal.tokens.TokenStreamPosition
 import scala.meta.internal.trees.Origin
-import scala.meta.internal.paiges.Doc
+import org.typelevel.paiges.Doc
 
 case class Comments(leading: List[String], trailing: List[String])
     extends InputStream {

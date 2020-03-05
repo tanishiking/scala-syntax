@@ -1,9 +1,9 @@
 package scala.meta.internal.prettyprinters
 
-import scala.meta.internal.paiges.Doc
-import scala.meta.internal.paiges.Doc._
-import scala.meta.internal.paiges.Doc.char
-import scala.meta.internal.paiges.Doc.text
+import org.typelevel.paiges.Doc
+import org.typelevel.paiges.Doc._
+import org.typelevel.paiges.Doc.char
+import org.typelevel.paiges.Doc.text
 
 object ScalaToken {
   val backtick: Doc = char('`')
@@ -75,5 +75,5 @@ object ScalaToken {
   val `>:` : Doc = text(">:")
   val `<:` : Doc = text("<:")
   val `<%` : Doc = text("<%")
-  val lineBlank: Doc = lineNoFlatNoIndent + lineNoFlat
+  val lineBlank: Doc = hardLine + hardLine
 }

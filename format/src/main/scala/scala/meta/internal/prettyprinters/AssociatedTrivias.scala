@@ -8,8 +8,8 @@ import scala.meta.Token
 import scala.meta.Token._
 import scala.meta.contrib._
 
-import scala.meta.internal.paiges.Doc
-import scala.meta.internal.paiges.Doc._
+import org.typelevel.paiges.Doc
+import org.typelevel.paiges.Doc._
 
 import org.scalameta.logger
 
@@ -145,7 +145,7 @@ final case class AssociatedTrivias(
 
           val result = cat(ts2.map {
             case _: LF =>
-              lineNoFlat
+              hardLine
 
             case _: Space =>
               space
@@ -170,7 +170,7 @@ final case class AssociatedTrivias(
                       empty
                     } else {
                       val indentDiff = indentSize(commentLine) - indentSize0
-                      lineNoFlat + spaces(indentDiff)
+                      hardLine + spaces(indentDiff)
                     }
 
                   doc + align + text(unindented)

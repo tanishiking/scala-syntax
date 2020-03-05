@@ -11,8 +11,8 @@ import CustomTrees._
 
 import scala.meta.internal.prettyprinters.{ScalaToken => S}
 
-import scala.meta.internal.paiges.Doc
-import scala.meta.internal.paiges.Doc._
+import org.typelevel.paiges.Doc
+import org.typelevel.paiges.Doc._
 
 import scala.meta._
 import scala.meta.internal.prettyprinters._
@@ -301,7 +301,7 @@ trait TreeDocOps extends SyntacticGroupOps with TreePrinterUtils {
         text(escaped)
       } else {
         text(str.substring(start, idx)) +
-          lineNoFlatNoIndent +
+          hardLine +
           dRawI(str, idx + 1, quoteStyle)
       }
     }

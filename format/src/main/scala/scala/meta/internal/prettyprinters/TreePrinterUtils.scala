@@ -2,8 +2,8 @@ package scala.meta.internal.prettyprinters
 
 import scala.meta._
 
-import scala.meta.internal.paiges.Doc
-import scala.meta.internal.paiges.Doc._
+import org.typelevel.paiges.Doc
+import org.typelevel.paiges.Doc._
 
 trait TreePrinterUtils extends WithPrinter {
   implicit class XtensionTrees(private val trees: List[Tree]) {

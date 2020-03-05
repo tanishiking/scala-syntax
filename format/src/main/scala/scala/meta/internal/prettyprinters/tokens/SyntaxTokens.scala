@@ -7,7 +7,7 @@ import Comments._
 import scala.meta._
 import scala.meta.Token._
 
-import scala.meta.internal.paiges.Doc
+import org.typelevel.paiges.Doc
 import scala.meta.internal.prettyprinters.{ScalaToken => S}
 
 case class ParamSeparator(
